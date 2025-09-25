@@ -1,14 +1,13 @@
 import Nav from "./components/Nav";
-import Hero from "./components/Hero";
-import Tickets from "./components/Tickets";
+import Footer from "./components/Footer";
+import MainCon from "./components/MainCon";
 
 function App() {
   return (
     <main>
       <Nav />
-      {/* <Hero /> */}
-
-      <Tickets />
+      <MainCon />
+      <Footer />
     </main>
   );
 }
