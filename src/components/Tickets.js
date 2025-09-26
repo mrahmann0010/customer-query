@@ -32,7 +32,7 @@ const issues = [
 
 function Tickets() {
   return (
-    <div className="md:col-span-3 grid grid-cols-2 gap-4 px-16 py-10 border-red-400 border bg-gray-100">
+    <div className="md:col-span-5 grid grid-cols-2 gap-4 px-16 py-10 border-red-400 border">
       {issues.map((issue, index) => (
         <TicketCard issue={issue} key={index} />
       ))}

@@ -1,9 +1,20 @@
 import { CiCalendarDate } from "react-icons/ci";
 import { FaCircleNotch } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import { addToOngoing } from "../redux/onGoingSlice";
 
 function TicketCard({ issue }) {
+  const dispatch = useDispatch();
+
+  const addIssueToStore = () => {
+    dispatch(addToOngoing(issue));
+  };
+
   return (
-    <div className="px-5 py-3 bg-white flex flex-col gap-1">
+    <div
+      className="px-5 py-3 bg-white flex flex-col gap-1 cursor-pointer"
+      onClick={addIssueToStore}
+    >
       <div className="flex justify-between items-center">
         <h2 className="text-2xl font-normal">{issue.title}</h2>
         <p className="flex gap-1 items-center px-4 py-1.5 rounded-3xl bg-green-300 text-gray-700">
