@@ -7,16 +7,16 @@ function Hero() {
   console.log(issues, resolved);
   return (
     <section className="px-8 py-16 bg-gray-100">
-      <div className="grid grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <ImgBox
           flip="transform scale-x-[-1]"
-          gradient="bg-[linear-gradient(90deg,#3F2B96_0%,#A8C0FF_100%)]"
+          gradient="bg-gradient-to-r from-emerald-500 to-emerald-900"
           count={issues}
           title="In-Progress"
         />
         <ImgBox
           flip="transform scale-x-[-1]"
-          gradient="bg-[linear-gradient(90deg,#00C9FF_0%,#92FE9D_100%)]"
+          gradient="bg-gradient-to-r from-fuchsia-500 to-cyan-500"
           count={resolved}
           title="Resolved"
         />

@@ -58,9 +58,9 @@ function Tickets() {
   }, []);
 
   return (
-    <div className="md:col-span-5 px-4">
-      <h2 className="py-8 text-xl font-semibold">Tourist-Issues</h2>
-      <div className=" grid grid-cols-2 gap-4">
+    <div className="col-span-1 md:col-span-5 px-4">
+      <h2 className="pb-4 text-xl font-semibold">Tourist-Issues</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {issues.map((issue, index) => (
           <TicketCard issue={issue} key={index} />
         ))}

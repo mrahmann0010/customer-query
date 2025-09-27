@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import stat from "daisyui/components/stat";
+import toast from "react-hot-toast";
 
 const initialState = {
   onGoingIssues: [],
@@ -14,14 +14,21 @@ const onGoingSlice = createSlice({
       const exists = state.onGoingIssues.find(
         (item) => item.idNum === action.payload.idNum
       );
-      if (exists) console.log("It already Exists my boy");
-      if (!exists) state.onGoingIssues.push(action.payload);
+      if (exists) {
+        toast.error("Already working into it 👨‍💻");
+        // console.log("It already Exists my boy");
+      }
+      if (!exists) {
+        state.onGoingIssues.push(action.payload);
+        toast.success("Added to Ongoing ⚙️");
+      }
     },
     removeFromOngoing: (state, action) => {
       state.onGoingIssues = state.onGoingIssues.filter(
         (item) => item.idNum !== action.payload.idNum
       );
-      console.log("Removed From the Store!");
+      toast.success("Issue has been resolved ☑️");
+      // console.log("Removed From the Store!");
     },
   },
 });

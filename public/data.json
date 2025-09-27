@@ -10,7 +10,7 @@
   },
   {
     "title": "Hotel search results not loading",
-    "status": "Ongoing",
+    "status": "Open",
     "description": "The hotel search page stays blank when filters are applied.",
     "idNum": 202,
     "priorityStatus": "Medium",
@@ -28,7 +28,7 @@
   },
   {
     "title": "Mobile app crashes on itinerary view",
-    "status": "Ongoing",
+    "status": "Open",
     "description": "App crashes when users try to view their itinerary details.",
     "idNum": 204,
     "priorityStatus": "High",
@@ -46,7 +46,7 @@
   },
   {
     "title": "Currency conversion mismatch",
-    "status": "Ongoing",
+    "status": "Open",
     "description": "Displayed prices in foreign currency do not match final checkout total.",
     "idNum": 206,
     "priorityStatus": "Medium",
@@ -63,8 +63,8 @@
     "date": "2025-09-22"
   },
   {
-    "title": "Delayed push notifications for gate changes",
-    "status": "Ongoing",
+    "title": "Delayed push notifications changes",
+    "status": "Open",
     "description": "Users receive gate change alerts after the boarding process has already started.",
     "idNum": 208,
     "priorityStatus": "Low",
@@ -77,12 +77,12 @@
     "description": "Frequent travelers report missing loyalty points after their completed trips.",
     "idNum": 209,
     "priorityStatus": "Medium",
-    "customerName": "Charlotte Green",
+    "customerName": "Olivia Green",
     "date": "2025-09-20"
   },
   {
     "title": "Visa assistance form not submitting",
-    "status": "Ongoing",
+    "status": "Open",
     "description": "Users cannot submit the visa assistance form due to a validation error.",
     "idNum": 210,
     "priorityStatus": "High",

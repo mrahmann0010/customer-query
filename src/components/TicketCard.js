@@ -1,3 +1,4 @@
+import toast from "react-hot-toast";
 import { CiCalendarDate } from "react-icons/ci";
 import { FaCircleNotch } from "react-icons/fa";
 import { useDispatch } from "react-redux";
@@ -12,7 +13,7 @@ function TicketCard({ issue }) {
 
   return (
     <div
-      className="px-5 py-3 bg-white flex flex-col gap-1 cursor-pointer"
+      className="px-5 py-4 bg-white flex flex-col gap-1 cursor-pointer rounded-lg"
       onClick={addIssueToStore}
     >
       <div className="flex justify-between items-center gap-2">
@@ -32,7 +33,7 @@ function TicketCard({ issue }) {
       <p className="text-lg text-gray-600 font-normal">{issue.description}</p>
 
       <div className="flex justify-between items-center">
-        <span className="flex gap-2 text-gray-700 text-md font-medium">
+        <span className="flex gap-2 text-gray-500 text-md font-normal">
           <p className="flex">
             <span>#</span>
             <span>{issue.idNum}</span>
@@ -44,9 +45,9 @@ function TicketCard({ issue }) {
               issue.priorityStatus === "High"
                 ? "text-red-500"
                 : issue.priorityStatus === "Medium"
-                ? "text-yellow-400"
+                ? "text-yellow-500"
                 : "text-green-400"
-            } text-md font-light`}
+            } text-md font-normal`}
           >
             {issue.priorityStatus}
           </p>
@@ -56,7 +57,7 @@ function TicketCard({ issue }) {
             {issue.customerName}
           </p>
 
-          <p className="flex gap-1 items-center">
+          <p className="flex gap-1 items-center text-md text-gray-500">
             <span>
               <CiCalendarDate />
             </span>
