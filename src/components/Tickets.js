@@ -75,7 +75,7 @@ export default Tickets;
 
 const NoTicketCard = () => {
   return (
-    <p className="text-xl font-medium text-gray-600">
+    <p className="text-xl font-medium text-green-800 text-center md:text-left">
       No Tickets To Display, everything is resolved ✅
     </p>
   );
