@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
+    <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content my-10 p-10">
       <nav>
         <h6 className="footer-title">TravelRel - Support</h6>
         <p className="text-gray-200 text-md font-normal">{description}</p>

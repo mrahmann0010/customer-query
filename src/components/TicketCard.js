@@ -15,9 +15,13 @@ function TicketCard({ issue }) {
       className="px-5 py-3 bg-white flex flex-col gap-1 cursor-pointer"
       onClick={addIssueToStore}
     >
-      <div className="flex justify-between items-center">
-        <h2 className="text-2xl font-normal">{issue.title}</h2>
-        <p className="flex gap-1 items-center px-4 py-1.5 rounded-3xl bg-green-300 text-gray-700">
+      <div className="flex justify-between items-center gap-2">
+        <h2 className="text-lg font-semibold">{issue.title}</h2>
+        <p
+          className={`flex gap-1 items-center px-4 py-1.5 rounded-3xl text-gray-700 ${
+            issue.status === "Open" ? "bg-green-300" : "bg-yellow-300"
+          }`}
+        >
           <span>
             <FaCircleNotch />
           </span>

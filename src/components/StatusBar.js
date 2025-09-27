@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { removeFromOngoing } from "../redux/onGoingSlice";
 import { addToResolve } from "../redux/resolvedSlice";
+import { removeTicket } from "../redux/ticketSlice";
 
 const tasks = [
   {
@@ -31,8 +32,8 @@ const OngoingStatus = ({ title, subTitle }) => {
   if (onGoingIssues.length !== 0) console.log("OngoingIssues", onGoingIssues);
 
   return (
-    <div className="">
-      <div className="flex flex-col gap-1">
+    <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-1 items-center">
         <h3 className="text-lg text-gray-600 font-semibold">
           {tasks[0].title}
         </h3>
@@ -57,8 +58,8 @@ const ResolvedStatus = ({ title, subTitle }) => {
     console.log("ResolvedIssues", resolvedIssues);
 
   return (
-    <div className="">
-      <div className="flex flex-col gap-1">
+    <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-1 items-center">
         <h3 className="text-lg text-gray-600 font-semibold">
           {tasks[1].title}
         </h3>
@@ -66,7 +67,7 @@ const ResolvedStatus = ({ title, subTitle }) => {
       </div>
       <div className="flex flex-col gap-4">
         {resolvedIssues.length === 0 ? (
-          <NoItemCard des="No ongoing Task Now" />
+          <NoItemCard des="All task has been resolved" />
         ) : (
           resolvedIssues.map((issue, index) => (
             <ResolvedCard issue={issue} key={index} />
@@ -83,6 +84,8 @@ const OngoingCard = ({ issue }) => {
     dispatch(removeFromOngoing(issue));
     // Also, add it to Resolved Lists
     dispatch(addToResolve(issue));
+    // Also, remove it from the tickets List
+    dispatch(removeTicket(issue));
   };
   return (
     <span className="flex flex-col gap-2 px-4 py-2 bg-white rounded-md items-center">
@@ -99,12 +102,13 @@ const OngoingCard = ({ issue }) => {
 
 const ResolvedCard = ({ issue }) => {
   return (
-    <span className="flex flex-col gap-2 px-4 py-2 bg-red-400 rounded-md items-center">
+    <span className="flex flex-col gap-1 px-3 py-1.5 bg-green-200 rounded-md items-center">
       <p className="text-black text-md font-normal">{issue.title}</p>
+      <p className="text-md font-normal pb-1">✅ Completed</p>
     </span>
   );
 };
 
 const NoItemCard = ({ des }) => {
-  return <p>{des}</p>;
+  return <p className="text-center">{des}</p>;
 };

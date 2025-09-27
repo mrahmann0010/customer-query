@@ -1,0 +1,92 @@
+[
+  {
+    "title": "Booking confirmation email not sent",
+    "status": "Open",
+    "description": "Customers report that they are not receiving confirmation emails after booking flights.",
+    "idNum": 201,
+    "priorityStatus": "High",
+    "customerName": "Emma Watson",
+    "date": "2025-09-26"
+  },
+  {
+    "title": "Hotel search results not loading",
+    "status": "Ongoing",
+    "description": "The hotel search page stays blank when filters are applied.",
+    "idNum": 202,
+    "priorityStatus": "Medium",
+    "customerName": "Liam Carter",
+    "date": "2025-09-25"
+  },
+  {
+    "title": "Flight cancellation refund delay",
+    "status": "Open",
+    "description": "Refunds for canceled flights are taking more than 10 business days to process.",
+    "idNum": 203,
+    "priorityStatus": "High",
+    "customerName": "Olivia Brown",
+    "date": "2025-09-24"
+  },
+  {
+    "title": "Mobile app crashes on itinerary view",
+    "status": "Ongoing",
+    "description": "App crashes when users try to view their itinerary details.",
+    "idNum": 204,
+    "priorityStatus": "High",
+    "customerName": "Noah Wilson",
+    "date": "2025-09-24"
+  },
+  {
+    "title": "Incorrect travel date shown on tickets",
+    "status": "Open",
+    "description": "Some tickets display the wrong travel date after rescheduling flights.",
+    "idNum": 205,
+    "priorityStatus": "High",
+    "customerName": "Ava Smith",
+    "date": "2025-09-23"
+  },
+  {
+    "title": "Currency conversion mismatch",
+    "status": "Ongoing",
+    "description": "Displayed prices in foreign currency do not match final checkout total.",
+    "idNum": 206,
+    "priorityStatus": "Medium",
+    "customerName": "Ethan Davis",
+    "date": "2025-09-22"
+  },
+  {
+    "title": "Seat selection not saving",
+    "status": "Open",
+    "description": "Selected seats disappear after payment is completed.",
+    "idNum": 207,
+    "priorityStatus": "High",
+    "customerName": "Mia Johnson",
+    "date": "2025-09-22"
+  },
+  {
+    "title": "Delayed push notifications for gate changes",
+    "status": "Ongoing",
+    "description": "Users receive gate change alerts after the boarding process has already started.",
+    "idNum": 208,
+    "priorityStatus": "Low",
+    "customerName": "James Lee",
+    "date": "2025-09-21"
+  },
+  {
+    "title": "Loyalty points not updating after trip",
+    "status": "Open",
+    "description": "Frequent travelers report missing loyalty points after their completed trips.",
+    "idNum": 209,
+    "priorityStatus": "Medium",
+    "customerName": "Charlotte Green",
+    "date": "2025-09-20"
+  },
+  {
+    "title": "Visa assistance form not submitting",
+    "status": "Ongoing",
+    "description": "Users cannot submit the visa assistance form due to a validation error.",
+    "idNum": 210,
+    "priorityStatus": "High",
+    "customerName": "Benjamin Clark",
+    "date": "2025-09-20"
+  }
+]

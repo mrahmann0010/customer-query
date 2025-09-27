@@ -4,7 +4,11 @@ const { default: themes } = require("daisyui/theme/object");
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "curl-image": "url('/public/imgs/vector1.png')",
+      },
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {
