@@ -61,12 +61,22 @@ function Tickets() {
     <div className="col-span-1 md:col-span-5 px-4">
       <h2 className="pb-4 text-xl font-semibold">Tourist-Issues</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {issues.map((issue, index) => (
-          <TicketCard issue={issue} key={index} />
-        ))}
+        {!issues || issues.length === 0 ? (
+          <NoTicketCard />
+        ) : (
+          issues.map((issue, index) => <TicketCard issue={issue} key={index} />)
+        )}
       </div>
     </div>
   );
 }
 
 export default Tickets;
+
+const NoTicketCard = () => {
+  return (
+    <p className="text-xl font-medium text-gray-600">
+      No Tickets To Display, everything is resolved ✅
+    </p>
+  );
+};

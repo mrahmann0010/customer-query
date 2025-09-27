@@ -3,12 +3,14 @@ import { CiCalendarDate } from "react-icons/ci";
 import { FaCircleNotch } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { addToOngoing } from "../redux/onGoingSlice";
+import { updateTicketStatus } from "../redux/ticketSlice";
 
 function TicketCard({ issue }) {
   const dispatch = useDispatch();
 
   const addIssueToStore = () => {
     dispatch(addToOngoing(issue));
+    dispatch(updateTicketStatus(issue));
   };
 
   return (
